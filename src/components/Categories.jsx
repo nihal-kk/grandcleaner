@@ -10,14 +10,15 @@ const Categories = ({
   setSortOrder,
 }) => {
   return (
-    <div className="p-4 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white shadow-md">
-      {/* 🔹 Category Buttons */}
-      <div className="flex flex-wrap gap-2">
+    <div className="p-4 bg-white shadow-md flex flex-col gap-2 md:flex-row md:items-center md:flex-wrap md:gap-2">
+      
+      {/* 🔹 Categories */}
+      <div className="flex gap-2 overflow-x-auto whitespace-nowrap md:flex-wrap md:flex-initial">
         {categories.map((cat) => (
           <button
             key={cat.name}
             onClick={() => setSelectedCategory(cat.name)}
-            className={`px-3 py-2 rounded border ${
+            className={`px-3 py-2 rounded border text-sm ${
               selectedCategory === cat.name
                 ? "bg-green-600 text-white border-green-600"
                 : "bg-white text-gray-700 border-gray-300"
@@ -28,12 +29,12 @@ const Categories = ({
         ))}
       </div>
 
-      {/* 🔹 Price Filter & Sort */}
-      <div className="flex gap-2 flex-wrap">
+      {/* 🔹 Filters */}
+      <div className="flex gap-2 flex-nowrap md:flex-initial md:ml-auto">
         <select
           value={selectedPrice}
           onChange={(e) => setSelectedPrice(e.target.value)}
-          className="p-2 border rounded"
+          className="p-2 border rounded text-sm flex-1 min-w-0"
         >
           <option value="All">All Prices</option>
           <option value="0-50">₹0 - ₹50</option>
@@ -45,7 +46,7 @@ const Categories = ({
         <select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
-          className="p-2 border rounded"
+          className="p-2 border rounded text-sm flex-1 min-w-0"
         >
           <option value="none">Sort By</option>
           <option value="low-high">Price: Low to High</option>

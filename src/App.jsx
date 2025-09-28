@@ -9,6 +9,7 @@ import WishlistSidebar from "./components/WishlistSidebar";
 
 // Import products
 import productsData from "./data/products.json";
+import Footer from "./components/Footer";
 
 const App = () => {
   // 🔹 Search & Slider
@@ -33,9 +34,10 @@ const App = () => {
 
   // 🔹 Slider Images
   const sliderImages = [
-    { id: 1, title: "Biggest Sale of the Year", subtitle: "Up to 70% off", cta: "Shop Now", image: "/images/slider1.jpg" },
-    { id: 2, title: "Latest Gadgets 2025", subtitle: "Smartphones, Laptops & more", cta: "Explore", image: "/images/slider2.jpg" },
-    { id: 3, title: "Fashion Trends", subtitle: "New arrivals in clothing & accessories", cta: "Discover", image: "/images/slider3.jpg" },
+ { id: 1, title: "Ultimate Cleaning Sale", subtitle: "Up to 50% off on all cleaning supplies", cta: "Shop Now", image: "/scoll/unicla.png" },
+{ id: 2, title: "Top Cleaning Gadgets 2025", subtitle: "Cleanx, Uniclean & Smart Cleaners", cta: "Explore", image: "/scoll/44-s.png" },
+{ id: 3, title: "Eco-Friendly Cleaning", subtitle: "Sustainable products for a spotless home", cta: "Discover", image: "/scoll/wendo.png" },
+
   ];
 
   // 🔹 Categories
@@ -165,6 +167,7 @@ const App = () => {
         toggleWishlist={toggleWishlist}
         addToCart={addToCart}
       />
+      <Footer/>
     </div>
   );
 };

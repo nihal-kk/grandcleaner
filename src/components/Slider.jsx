@@ -12,7 +12,7 @@ const Slider = ({ sliderImages, currentSlide, setCurrentSlide, isSliderVisible }
         {sliderImages.map((slide) => (
           <div key={slide.id} className="w-full flex-shrink-0 relative">
             <div className="h-96 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
-              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover opacity-30" />
+              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover opacity-60" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white max-w-4xl px-4">
                   <h2 className="text-4xl md:text-6xl font-bold mb-4">{slide.title}</h2>
