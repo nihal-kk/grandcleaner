@@ -99,8 +99,9 @@ const ProductsList = ({
                  <img
   src={product.image || "/default-product.jpg"}
   alt={product.name}
-  className="w-full h-48 object-cover"
+  className="w-full h-64 sm:h-48 object-cover"
 />
+
 
 
                   {product.discount > 0 && (
