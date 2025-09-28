@@ -96,11 +96,12 @@ const ProductsList = ({
               >
                 {/* Image, Discount Badge & Wishlist */}
                 <div className="relative">
-                  <img
-                    src={product.image || "/images/default-product.jpg"}
-                    alt={product.name}
-                    className="w-full h-48 object-cover"
-                  />
+                 <img
+  src={product.image || "/default-product.jpg"}
+  alt={product.name}
+  className="w-full h-48 object-cover"
+/>
+
 
                   {product.discount > 0 && (
                     <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">

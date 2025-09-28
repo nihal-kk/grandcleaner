@@ -6,6 +6,7 @@ import ProductsList from "./components/ProductsList";
 import CartSidebar from "./components/CartSidebar";
 import WishlistSidebar from "./components/WishlistSidebar";
 
+
 // Import products
 import productsData from "./data/products.json";
 
